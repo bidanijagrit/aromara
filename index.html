@@ -624,7 +624,7 @@
       gap: 10px;
     }
 
-    .shipping-info, .return-policy {
+    .shipping-info {
       background: rgba(255, 255, 255, 0.1);
       padding: 20px;
       border-radius: 15px;
@@ -904,6 +904,105 @@
       color: #e0e0e0;
       font-size: 0.9rem;
     }
+
+    /* Mobile Responsive Styles */
+    @media (max-width: 768px) {
+      .brand-header h1 {
+        font-size: 2rem;
+        padding: 0 15px;
+      }
+      .brand-header p {
+        font-size: 1rem;
+        padding: 0 15px;
+      }
+      .product {
+        max-width: 100%;
+        margin: 15px;
+        padding: 15px;
+      }
+      .product h3 {
+        font-size: 1.5rem;
+      }
+      .product p {
+        font-size: 0.9rem;
+      }
+      .order-button, .payment-button {
+        width: 100%;
+        margin: 10px 0;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+      }
+      .filter-options {
+        flex-direction: column;
+        gap: 8px;
+      }
+      .filter-button {
+        width: 100%;
+        padding: 10px;
+        font-size: 0.9rem;
+      }
+      .search-input {
+        font-size: 0.9rem;
+        padding: 12px 15px;
+      }
+      .features-container, .steps-container {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .feature, .step {
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+      }
+      .social-section h2, .testimonials h2, .about h2, .contact h2 {
+        font-size: 1.8rem;
+        padding: 0 15px;
+      }
+      .floating-whatsapp {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        bottom: 20px;
+        right: 20px;
+      }
+      .back-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        bottom: 20px;
+        left: 20px;
+      }
+      .popup-content {
+        width: 95%;
+        padding: 15px;
+        margin: 10px;
+      }
+      .share-buttons {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .share-button {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+      }
+      .info-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+      .info-item {
+        padding: 12px;
+      }
+      .faq-question h3 {
+        font-size: 1rem;
+      }
+      .faq-answer p {
+        font-size: 0.9rem;
+      }
+      .contact a {
+        font-size: 1.1rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -941,7 +1040,7 @@
       <h3 style="color: #ffe27a; font-size: 1.8rem; margin-bottom: 10px; font-family: 'Playfair Display', serif;">Armani</h3>
       <p style="color: #e0e0e0; margin-bottom: 15px;">Sweet and fruity fragrance</p>
       <p style="color: #ffd700; font-size: 1.4rem; font-weight: 600; margin-bottom: 20px;">₹299</p>
-      <button class="payment-button" onclick="initiatePayment('Armani')">Pay ₹299</button>
+      <a href="upi://pay?pa=9034075510@fam&pn=Gulvaria&am=299&cu=INR&tn=Payment%20for%20Armani%20-%20Gulvaria%20Perfumes" class="payment-button">Pay ₹299</a>
       <a href="https://wa.me/919034075510" target="_blank" class="order-button">Order Now</a>
       
       <div class="product-experience">
@@ -971,31 +1070,6 @@
         </p>
         <button class="view-3d" onclick="view3D('Armani')">View in 3D</button>
       </div>
-
-      <div class="product-info">
-        <div class="info-grid">
-          <div class="info-item">
-            <div class="info-icon">⏱️</div>
-            <div class="info-title">Longevity</div>
-            <div class="info-text">4-6 hours</div>
-          </div>
-          <div class="info-item">
-            <div class="info-icon">🌡️</div>
-            <div class="info-title">Best Time to Wear</div>
-            <div class="info-text">Day & Evening</div>
-          </div>
-          <div class="info-item">
-            <div class="info-icon">🎯</div>
-            <div class="info-title">Occasion</div>
-            <div class="info-text">Casual & Formal</div>
-          </div>
-          <div class="info-item">
-            <div class="info-icon">🧪</div>
-            <div class="info-title">Ingredients</div>
-            <div class="info-text">Natural & Synthetic</div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <div class="product">
@@ -1004,7 +1078,7 @@
       <h3 style="color: #ffe27a; font-size: 1.8rem; margin-bottom: 10px; font-family: 'Playfair Display', serif;">Signature</h3>
       <p style="color: #e0e0e0; margin-bottom: 15px;">Strong and hard-hitting fragrance</p>
       <p style="color: #ffd700; font-size: 1.4rem; font-weight: 600; margin-bottom: 20px;">₹299</p>
-      <button class="payment-button" onclick="initiatePayment('Signature')">Pay ₹299</button>
+      <a href="upi://pay?pa=9034075510@fam&pn=Gulvaria&am=299&cu=INR&tn=Payment%20for%20Signature%20-%20Gulvaria%20Perfumes" class="payment-button">Pay ₹299</a>
       <a href="https://wa.me/919034075510" target="_blank" class="order-button">Order Now</a>
     </div>
 
@@ -1014,7 +1088,7 @@
       <h3 style="color: #ffe27a; font-size: 1.8rem; margin-bottom: 10px; font-family: 'Playfair Display', serif;">Black Heart</h3>
       <p style="color: #e0e0e0; margin-bottom: 15px;">Sweet as well as hard fragrance</p>
       <p style="color: #ffd700; font-size: 1.4rem; font-weight: 600; margin-bottom: 20px;">₹299</p>
-      <button class="payment-button" onclick="initiatePayment('Black Heart')">Pay ₹299</button>
+      <a href="upi://pay?pa=9034075510@fam&pn=Gulvaria&am=299&cu=INR&tn=Payment%20for%20Black%20Heart%20-%20Gulvaria%20Perfumes" class="payment-button">Pay ₹299</a>
       <a href="https://wa.me/919034075510" target="_blank" class="order-button">Order Now</a>
     </div>
   </div>
@@ -1066,6 +1140,92 @@
     </div>
   </section>
 
+  <section class="shipping-info">
+    <h2>Shipping Information</h2>
+    <div class="info-grid">
+      <div class="info-item">
+        <i class="fas fa-truck"></i>
+        <h3>Fast Delivery</h3>
+        <p>2-3 business days</p>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-box"></i>
+        <h3>Secure Packaging</h3>
+        <p>Bubble wrapped</p>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Nationwide</h3>
+        <p>All over India</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="return-policy">
+    <h2>Return Policy</h2>
+    <div class="info-grid">
+      <div class="info-item">
+        <i class="fas fa-undo"></i>
+        <h3>7 Days Return</h3>
+        <p>Easy returns</p>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-shield-alt"></i>
+        <h3>100% Secure</h3>
+        <p>Safe transactions</p>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-headset"></i>
+        <h3>24/7 Support</h3>
+        <p>Always available</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="product-info">
+    <h3 style="color: #ffe27a; margin-bottom: 15px;">Product Information</h3>
+    <div class="info-grid">
+      <div class="info-item">
+        <div class="info-icon">⏱️</div>
+        <div class="info-title">Longevity</div>
+        <div class="info-text">4-6 hours</div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">🌡️</div>
+        <div class="info-title">Best Time to Wear</div>
+        <div class="info-text">Day & Evening</div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">🎯</div>
+        <div class="info-title">Occasion</div>
+        <div class="info-text">Casual & Formal</div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">🧪</div>
+        <div class="info-title">Ingredients</div>
+        <div class="info-text">Natural & Synthetic</div>
+      </div>
+    </div>
+  </div>
+
+  <section class="payment-methods">
+    <h2>Payment Methods</h2>
+    <div class="payment-methods">
+      <div class="payment-method">
+        <i class="fas fa-mobile-alt"></i>
+        <span>UPI</span>
+      </div>
+      <div class="payment-method">
+        <i class="fab fa-google-pay"></i>
+        <span>Google Pay</span>
+      </div>
+      <div class="payment-method">
+        <i class="fas fa-university"></i>
+        <span>Bank Transfer</span>
+      </div>
+    </div>
+  </section>
+
   <section class="faq-section">
     <h2>Frequently Asked Questions</h2>
     <div class="faq-container">
@@ -1099,33 +1259,6 @@
     </div>
   </section>
 
-  <section class="testimonials">
-    <h2>What Our Customers Say</h2>
-    <div class="testimonial">
-      <p>"Gulvaria's Jasmine Whisper is pure magic! I feel so confident every time I wear it."</p>
-      <span>— Ananya Mehta, Mumbai</span>
-    </div>
-    <div class="testimonial">
-      <p>"The packaging alone feels like unwrapping a treasure. And the scent lasts all day!"</p>
-      <span>— Rajiv Sharma, Delhi</span>
-    </div>
-    <div class="testimonial">
-      <p>"I've tried many luxury perfumes, but none compare to Gulvaria's Oud Royale. Simply divine."</p>
-      <span>— Priya Kapoor, Bangalore</span>
-    </div>
-  </section>
-
-  <section class="about">
-    <h2>About Us</h2>
-    <p>Gulvaria isn't just a fragrance brand — it's a lifestyle. Inspired by elegance, crafted with precision, and made for those who want to leave a lasting impression. Our scents are timeless, graceful, and truly unforgettable — because you deserve a perfume that speaks your essence.</p>
-    <div style="max-width: 400px; margin: 60px auto; padding: 30px; border-radius: 20px; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); text-align: center; font-family: 'Georgia', serif; border: 1px solid rgba(255, 255, 255, 0.2);">
-      <h2 style="font-size: 2rem; margin-bottom: 15px; color: #d4af37;">Need Assistance?</h2>
-      <p style="font-size: 1.2rem; color: #ffffffcc; margin-bottom: 10px;">Call us directly</p>
-      <p style="font-size: 1.6rem; font-weight: bold; color: #ffffff;">📞 9034075510</p>
-      <a href="tel:9034075510" style="display: inline-block; margin-top: 20px; padding: 12px 30px; background: linear-gradient(to right, #d4af37, #b28c34); color: #fff; font-size: 1rem; font-weight: bold; border-radius: 50px; text-decoration: none; transition: transform 0.3s ease;">📲 Call Now</a>
-    </div>
-  </section>
-
   <section class="social-section">
     <h2>Follow Us</h2>
     <div class="social-icons">
@@ -1139,6 +1272,10 @@
     <a href="mailto:gulvaria.in@gmail.com">gulvaria.in@gmail.com</a>
   </section>
 
+  <footer style="text-align: center; padding: 20px; background: rgba(26, 26, 26, 0.95); color: #ffe27a; margin-top: 40px;">
+    <p>2025 All Rights Reserved</p>
+  </footer>
+
   <a href="https://wa.me/919034075510" class="floating-whatsapp" target="_blank">
     <i class="fab fa-whatsapp"></i>
   </a>
@@ -1146,10 +1283,6 @@
   <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
     <i class="fas fa-arrow-up"></i>
   </div>
-
-  <footer>
-    <p>2025 All Rights Reserved</p>
-  </footer>
 
   <div class="product-details-popup" id="productPopup">
     <div class="popup-content">
@@ -1204,91 +1337,32 @@
     </div>
   </div>
 
-  <section class="shipping-info">
-    <h2>Shipping Information</h2>
-    <div class="info-grid">
-      <div class="info-item">
-        <i class="fas fa-truck"></i>
-        <h3>Fast Delivery</h3>
-        <p>2-3 business days</p>
-      </div>
-      <div class="info-item">
-        <i class="fas fa-box"></i>
-        <h3>Secure Packaging</h3>
-        <p>Bubble wrapped</p>
-      </div>
-      <div class="info-item">
-        <i class="fas fa-map-marker-alt"></i>
-        <h3>Nationwide</h3>
-        <p>All over India</p>
-      </div>
+  <section class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial">
+      <p>"Gulvaria's Jasmine Whisper is pure magic! I feel so confident every time I wear it."</p>
+      <span>— Ananya Mehta, Mumbai</span>
+    </div>
+    <div class="testimonial">
+      <p>"The packaging alone feels like unwrapping a treasure. And the scent lasts all day!"</p>
+      <span>— Rajiv Sharma, Delhi</span>
+    </div>
+    <div class="testimonial">
+      <p>"I've tried many luxury perfumes, but none compare to Gulvaria's Oud Royale. Simply divine."</p>
+      <span>— Priya Kapoor, Bangalore</span>
     </div>
   </section>
 
-  <section class="payment-methods">
-    <h2>Payment Methods</h2>
-    <div class="payment-methods">
-      <div class="payment-method">
-        <i class="fas fa-mobile-alt"></i>
-        <span>UPI</span>
-      </div>
-      <div class="payment-method">
-        <i class="fab fa-google-pay"></i>
-        <span>Google Pay</span>
-      </div>
-      <div class="payment-method">
-        <i class="fas fa-university"></i>
-        <span>Bank Transfer</span>
-      </div>
+  <section class="about">
+    <h2>About Us</h2>
+    <p>Gulvaria isn't just a fragrance brand — it's a lifestyle. Inspired by elegance, crafted with precision, and made for those who want to leave a lasting impression. Our scents are timeless, graceful, and truly unforgettable — because you deserve a perfume that speaks your essence.</p>
+    <div style="max-width: 400px; margin: 60px auto; padding: 30px; border-radius: 20px; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); text-align: center; font-family: 'Georgia', serif; border: 1px solid rgba(255, 255, 255, 0.2);">
+      <h2 style="font-size: 2rem; margin-bottom: 15px; color: #d4af37;">Need Assistance?</h2>
+      <p style="font-size: 1.2rem; color: #ffffffcc; margin-bottom: 10px;">Call us directly</p>
+      <p style="font-size: 1.6rem; font-weight: bold; color: #ffffff;">📞 9034075510</p>
+      <a href="tel:9034075510" style="display: inline-block; margin-top: 20px; padding: 12px 30px; background: linear-gradient(to right, #d4af37, #b28c34); color: #fff; font-size: 1rem; font-weight: bold; border-radius: 50px; text-decoration: none; transition: transform 0.3s ease;">📲 Call Now</a>
     </div>
   </section>
-
-  <section class="return-policy">
-    <h2>Return Policy</h2>
-    <div class="info-grid">
-      <div class="info-item">
-        <i class="fas fa-undo"></i>
-        <h3>7 Days Return</h3>
-        <p>Easy returns</p>
-      </div>
-      <div class="info-item">
-        <i class="fas fa-shield-alt"></i>
-        <h3>100% Secure</h3>
-        <p>Safe transactions</p>
-      </div>
-      <div class="info-item">
-        <i class="fas fa-headset"></i>
-        <h3>24/7 Support</h3>
-        <p>Always available</p>
-      </div>
-    </div>
-  </section>
-
-  <div class="product-info">
-    <h3 style="color: #ffe27a; margin-bottom: 15px;">Product Information</h3>
-    <div class="info-grid">
-      <div class="info-item">
-        <div class="info-icon">⏱️</div>
-        <div class="info-title">Longevity</div>
-        <div class="info-text">4-6 hours</div>
-      </div>
-      <div class="info-item">
-        <div class="info-icon">🌡️</div>
-        <div class="info-title">Best Time to Wear</div>
-        <div class="info-text">Day & Evening</div>
-      </div>
-      <div class="info-item">
-        <div class="info-icon">🎯</div>
-        <div class="info-title">Occasion</div>
-        <div class="info-text">Casual & Formal</div>
-      </div>
-      <div class="info-item">
-        <div class="info-icon">🧪</div>
-        <div class="info-title">Ingredients</div>
-        <div class="info-text">Natural & Synthetic</div>
-      </div>
-    </div>
-  </div>
 
   <script>
     window.onload = () => {
@@ -1353,18 +1427,6 @@
         showProductDetails(title, image, description, price);
       });
     });
-
-    function initiatePayment(productName) {
-      const upiId = '9034075510@fam';
-      const amount = '299';
-      const note = `Payment for ${productName} - Gulvaria Perfumes`;
-      
-      // Create UPI URL with parameters
-      const upiUrl = `upi://pay?pa=${upiId}&pn=Gulvaria&am=${amount}&cu=INR&tn=${encodeURIComponent(note)}`;
-      
-      // Open UPI payment interface
-      window.location.href = upiUrl;
-    }
 
     function view3D(productName) {
       // This function will be implemented when we add the 3D viewer
